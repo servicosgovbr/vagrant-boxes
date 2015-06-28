@@ -1,0 +1,9 @@
+cluster.name: 'elasticsearch'
+node.name: '{{ grains['host'] }}'
+
+network.publish_host: '{{ grains['ip4_interfaces']['enp0s8'][0] }}'
+
+discovery.zen.ping.unicast.hosts:
+{% for server, addrs in salt['mine.get']('es*', 'network.ip_addrs').items() %}
+  - '{{ addrs[0] }}:9300'
+{% endfor %}

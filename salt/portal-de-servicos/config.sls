@@ -5,5 +5,6 @@ portal-de-servicos-config:
     - user: portalservicos
     - group: portalservicos
     - mode: 644
+    - template: jinja
     - require:
       - pkg: portal-de-servicos-package

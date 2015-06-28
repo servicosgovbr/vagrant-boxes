@@ -4,3 +4,4 @@ elasticsearch-service:
     - enable: True
     - watch:
       - pkg: elasticsearch-package
+      - file: elasticsearch-config

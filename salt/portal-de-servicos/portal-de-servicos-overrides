@@ -4,7 +4,8 @@
 JAVA_OPTS=-Xms256M -Xmx1G
 
 ## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por vírgula.
-SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="10.16.0.9:9300,10.16.0.11:9300"
+
+SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="{% for n, addrs in salt['mine.get']('es*', 'network.ip_addrs').items() %}{{ addrs[0] }}:9300,{% endfor %}"
 
 ## Habilita o cache do sistema de renderização de templates Thymeleaf.
 SPRING_THYMELEAF_CACHE=true

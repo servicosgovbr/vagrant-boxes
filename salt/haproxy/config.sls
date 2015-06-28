@@ -5,5 +5,6 @@ haproxy-config:
     - user: root
     - group: root
     - mode: 644
+    - template: jinja
     - require:
       - pkg: haproxy-package
