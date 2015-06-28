@@ -1,7 +1,10 @@
 base:
-  '*':
+  'lb':
     - haproxy
+  'app*':
     - jdk
     - portal-de-servicos
-    - elasticsearch
     - editor-de-servicos
+  'es*':
+    - jdk
+    - elasticsearch
