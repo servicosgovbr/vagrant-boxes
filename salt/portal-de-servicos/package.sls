@@ -1,5 +1,5 @@
 portal-de-servicos-package:
-  pkg.installed:
+  pkg.latest:
     - name: portal-de-servicos
     - require:
       - pkgrepo: portal-de-servicos-package-repo

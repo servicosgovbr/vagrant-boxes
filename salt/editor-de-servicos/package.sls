@@ -1,5 +1,5 @@
 editor-de-servicos-package:
-  pkg.installed:
+  pkg.latest:
     - name: editor-de-servicos
     - require:
       - pkgrepo: editor-de-servicos-package-repo
