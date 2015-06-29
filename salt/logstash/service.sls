@@ -5,3 +5,4 @@ logstash-service:
     - watch:
       - pkg: logstash-package
       - file: logstash-config
+      - service: elasticsearch-service
