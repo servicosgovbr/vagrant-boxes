@@ -7,4 +7,4 @@ logstash-config:
     - mode: 644
     - template: jinja
     - require:
-      - pkg: logstash-package 
+      - pkg: logstash-package

@@ -4,5 +4,5 @@ logstash-service:
     - enable: True
     - watch:
       - pkg: logstash-package
+      - cmd: logstash-input-journald-plugin
       - file: logstash-config
-      - service: elasticsearch-service

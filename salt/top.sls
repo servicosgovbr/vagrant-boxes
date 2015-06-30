@@ -1,15 +1,14 @@
 base:
   'lb':
     - haproxy
-    - rsyslog
+    - jdk
+    - logstash
   'app*':
     - jdk
     - portal-de-servicos
     - editor-de-servicos
-    - rsyslog
+    - logstash
   'es*':
     - jdk
     - elasticsearch
-    - rsyslog
-  'es1':
     - logstash
