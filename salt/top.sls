@@ -1,14 +1,15 @@
 base:
+  '*':
+    - jdk
+    - logstash
+
   'lb':
     - haproxy
-    - jdk
-    - logstash
+    - kibana
+
   'app*':
-    - jdk
     - portal-de-servicos
     - editor-de-servicos
-    - logstash
+
   'es*':
-    - jdk
     - elasticsearch
-    - logstash
