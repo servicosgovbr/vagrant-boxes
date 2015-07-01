@@ -8,4 +8,9 @@ Para rodar, certifique-se de que a suas versões do Vagrant e VirtualBox são re
 vagrant up
 ```
 
-O sistema fica disponível em http://localhost:8081.
+Após a inicialização, os seguintes serviços ficam disponíveis:
+
+* http://localhost:8081 - Portal de Serviços
+* http://localhost:8081/editar - Editor de Serviços
+* http://localhost:8888 - Kibana
+* http://localhost:9200 - ElasticSearch
