@@ -1,5 +1,16 @@
+# Configuração dos salt-minions, instalados em todas as máquinas do cluster
+
+# Endereço do master
+# TODO: usar DNS para apontar para ele
+#
 master: 10.16.0.10
 
+# Usa o salt-mine para guardar os resultados do ping e do endereço interno
+# de rede que, no Vagrant, fica em enp0s8.
+#
+# TODO: será necessário parametrizar para compatibilidade com máquinas 
+# rodando fora do Vagrant.
+#
 mine_functions:
   test.ping: []
   network.ip_addrs:

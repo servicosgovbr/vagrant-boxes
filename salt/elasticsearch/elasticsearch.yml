@@ -1,9 +1,14 @@
 cluster.name: 'elasticsearch'
 node.name: '{{ grains['host'] }}'
 
+# TODO: Compatibilidade com máquinas gerenciadas fora do Vagrant podem não 
+# ter a mesma interface de rede (enp0s8) para a rede interna.
 network.host: '{{ grains['ip4_interfaces']['enp0s8'][0] }}'
 
+# Desabilita usa multicast
 discovery.zen.ping.multicast.enabled: false
+
+# Explicita todos os hosts conhecidos rodando o ElasticSearch (es*)
 discovery.zen.ping.unicast.hosts:
 {% for server, addrs in salt['mine.get']('es*', 'network.ip_addrs').items() %}
   - '{{ addrs[0] }}:9300'

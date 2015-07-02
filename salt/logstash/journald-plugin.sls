@@ -1,3 +1,6 @@
+# Esta gem foi construída a partir do repositório no GitHub:
+# https://github.com/stuart-warren/logstash-input-journald
+#
 logstash-input-journald-plugin-gem:
   file.managed:
     - name: /root/logstash-input-journald-0.0.2.gem
