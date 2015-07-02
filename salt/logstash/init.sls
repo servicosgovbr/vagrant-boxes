@@ -1,7 +1,7 @@
 include:
   - .package-repo
   - .package
-  - .plugin
+  - .plugins
   - .config
   - .config-fix
   - .service
