@@ -1,0 +1,11 @@
+master: 10.16.0.10
+
+mine_functions:
+  test.ping: []
+  network.ip_addrs:
+    interface: enp0s8
+
+schedule:
+  highstate:
+    function: state.highstate
+    minutes: 60

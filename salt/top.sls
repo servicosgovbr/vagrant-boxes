@@ -3,6 +3,7 @@ base:
     - ntp
     - jdk
     - logstash
+    - salt-minion
 
   'lb':
     - haproxy
