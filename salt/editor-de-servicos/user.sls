@@ -8,7 +8,7 @@ editor-de-servicos-user:
 
 editor-de-servicos-private-key:
   file.managed:
-    - name: /var/lib/editor-de-servicos/.ssh/github
+    - name: /var/lib/editor-de-servicos/.ssh/id_rsa
     - source: salt://editor-de-servicos/github.pem
     - mode: 600
     - user: editorservicos
@@ -19,7 +19,7 @@ editor-de-servicos-private-key:
 
 editor-de-servicos-public-key:
   file.managed:
-    - name: /var/lib/editor-de-servicos/.ssh/github.pub
+    - name: /var/lib/editor-de-servicos/.ssh/id_rsa.pub
     - source: salt://editor-de-servicos/github.pub
     - mode: 644
     - user: editorservicos
