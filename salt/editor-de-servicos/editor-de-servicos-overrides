@@ -1,0 +1,28 @@
+## Variáveis de ambiente para configuração do Editor de Serviços
+
+## Opções passadas à JVM (parâmetros de memória, GC etc)
+JAVA_OPTS=-Xms256M -Xmx1G
+
+## Habilita o cache do sistema de renderização de templates Thymeleaf.
+SPRING_THYMELEAF_CACHE=true
+
+## Habilita envio de alterações para o Github
+FLAGS_GIT_PUSH=true
+
+## Usa repositório com permissões de escrita (via SSH)
+EDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
+
+## Desabilita as URLs de informação e estado do sistema disponibilizadas pelo Spring-Boot.
+ENDPOINTS_ENABLED=false
+
+# Desabilita a URL /jolokia
+ENDPOINTS_JOLOKIA_ENABLED=false
+
+## Habilita a URL /info, que contém informações sobre a versão da aplicação.
+ENDPOINTS_INFO_ENABLED=true
+
+## Habilita a URL /health, que contém informações sobre o estado de saúde da aplicação.
+ENDPOINTS_HEALTH_ENABLED=true
+
+## Desabilita a disponibilização de dados sensíveis no estado de saúde, como do cluster ElasticSearch e espaço em disco.
+ENDPOINTS_HEALTH_SENSITIVE=false
