@@ -23,10 +23,7 @@ Vagrant.configure('2') do |config|
       salt.minion_config = 'etc/minion'
       salt.master_config = 'etc/master'
 
-      salt.install_type = 'git'
-      salt.install_args = 'v2015.5.2'
-
-      salt.verbose = true
+      salt.install_type = 'stable'
       salt.run_highstate = true
 
       salt.master_key = 'etc/keys/lb.pem'
@@ -49,9 +46,7 @@ Vagrant.configure('2') do |config|
     config.vm.provision :salt do |salt|
       salt.minion_config = 'etc/minion'
       salt.run_highstate = true
-      salt.install_type = 'git'
-      salt.install_args = 'v2015.5.2'
-      salt.verbose = true
+      salt.install_type = 'stable'
 
       salt.minion_key = "etc/keys/#{config.vm.hostname}.pem"
       salt.minion_pub = "etc/keys/#{config.vm.hostname}.pub"
