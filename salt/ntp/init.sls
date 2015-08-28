@@ -1,4 +1,0 @@
-include:
-  - .package
-  - .config
-  - .service
